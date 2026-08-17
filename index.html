@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Techfest | Cyber-Ascent</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Open+Sans:wght@400;600&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./src/style.css">
+  </head>
+  <body>
+    <!-- HUD Overlays (Fixed to screen) -->
+    <div class="hud-overlay">
+      <div class="hud-corner top-left"></div>
+      <div class="hud-corner top-right"></div>
+      <div class="hud-corner bottom-left"></div>
+      <div class="hud-corner bottom-right"></div>
+      <div class="hud-scanline"></div>
+      <div class="hud-crosshair"></div>
+      <div class="hud-data-stream">SYS_OP: ONLINE // <span id="clock">00:00:00</span> // LAT: 19.1334 N // LON: 72.9133 E</div>
+    </div>
+
+    <!-- Global Navigation -->
+    <nav class="cyber-nav">
+      <div class="nav-brand">TF.26</div>
+      <div class="nav-links">
+        <a href="#hero">INIT</a>
+        <a href="#about">VISION</a>
+        <a href="#tracks">COMPETITIONS</a>
+        <a href="#sponsors">SPONSORS</a>
+      </div>
+      <a href="#" class="btn-register nav-btn">REGISTER</a>
+    </nav>
+
+    <!-- Global Particles Canvas -->
+    <canvas id="particles-canvas"></canvas>
+
+    <div class="scroll-container">
+      
+      <!-- Section 1: Hero -->
+      <section class="section hero-section" id="hero">
+        <div class="parallax-layer parallax-bg hero-bg">
+          <img src="/bg.jpg" alt="Cyber City" />
+          <div class="overlay"></div>
+        </div>
+        <div class="parallax-layer parallax-mid hero-mid">
+          <div class="neon-car car-1"></div>
+          <div class="neon-car car-2"></div>
+        </div>
+        <div class="parallax-layer parallax-fore hero-fore">
+          <div class="boot-sequence">
+            <p>> CONNECTING TO MAINFRAME...</p>
+            <p>> AUTHENTICATION SUCCESSFUL</p>
+          </div>
+          <h2 class="sub-logo glitch-text" data-text="TECHFEST 2026">TECHFEST 2026</h2>
+          <h1 class="main-title">Ascend to the Future</h1>
+          
+          <div class="countdown-container">
+            <div class="countdown-item"><span id="days">00</span><label>DAYS</label></div>
+            <div class="countdown-item"><span id="hours">00</span><label>HRS</label></div>
+            <div class="countdown-item"><span id="minutes">00</span><label>MIN</label></div>
+            <div class="countdown-item"><span id="seconds">00</span><label>SEC</label></div>
+          </div>
+
+          <div class="scroll-indicator">
+            <span>ENGAGE THRUSTERS</span>
+            <div class="mouse"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 2: About / Vision -->
+      <section class="section about-section" id="about">
+        <div class="parallax-layer parallax-bg about-bg">
+          <div class="clouds-layer"></div>
+        </div>
+        <div class="parallax-layer parallax-mid about-mid">
+          <div class="glass-card about-card">
+            <div class="card-deco-line"></div>
+            <h2>The Vision</h2>
+            <p>Welcome to Cyber-Ascent, where we rise above the noise. The 29th edition of Asia's Largest Science and Technology Festival. Prepare to explore the stratosphere of modern technology.</p>
+            <div class="stats-row">
+              <div class="stat-box"><span>175K+</span><label>Footfall</label></div>
+              <div class="stat-box"><span>2500+</span><label>Colleges</label></div>
+              <div class="stat-box"><span>₹6M+</span><label>Prizes</label></div>
+            </div>
+          </div>
+        </div>
+        <div class="parallax-layer parallax-fore about-fore">
+          <div class="wireframe drone-1"></div>
+          <div class="wireframe drone-2"></div>
+          <div class="wireframe drone-3"></div>
+        </div>
+      </section>
+
+      <!-- Section 3: Event Tracks (Competitions) -->
+      <section class="section tracks-section" id="tracks">
+        <div class="parallax-layer parallax-bg tracks-bg">
+          <div class="grid-lines"></div>
+        </div>
+        <div class="parallax-layer parallax-mid tracks-mid"></div>
+        <div class="parallax-layer parallax-fore tracks-fore">
+          <h2 class="section-title">COMPETITIONS DIRECTORY</h2>
+          <div class="tracks-grid">
+            
+            <div class="glass-card track-card track-left">
+              <div class="card-hud-header">SYS.COMP.01</div>
+              <h3>Robowars</h3>
+              <p>Design a heavy battle bot and dominate the arena.</p>
+              <div class="track-meta">
+                <span class="prize">PRIZE: ₹2,00,000</span>
+                <span class="status pulse">OPEN</span>
+              </div>
+            </div>
+
+            <div class="glass-card track-card track-center">
+              <div class="card-hud-header">SYS.COMP.02</div>
+              <h3>HackAI</h3>
+              <p>48-hour artificial intelligence & machine learning hackathon.</p>
+              <div class="track-meta">
+                <span class="prize">PRIZE: ₹1,50,000</span>
+                <span class="status pulse">OPEN</span>
+              </div>
+            </div>
+
+            <div class="glass-card track-card track-right">
+              <div class="card-hud-header">SYS.COMP.03</div>
+              <h3>Drone Racing</h3>
+              <p>First-Person View (FPV) high-speed drone maneuvering.</p>
+              <div class="track-meta">
+                <span class="prize">PRIZE: ₹1,00,000</span>
+                <span class="status pulse">OPEN</span>
+              </div>
+            </div>
+
+            <div class="glass-card track-card track-left delay-1">
+              <div class="card-hud-header">SYS.COMP.04</div>
+              <h3>Meshmerize</h3>
+              <p>Autonomous line-following and grid-solving robotics.</p>
+              <div class="track-meta">
+                <span class="prize">PRIZE: ₹80,000</span>
+                <span class="status pulse">OPEN</span>
+              </div>
+            </div>
+
+            <div class="glass-card track-card track-center delay-1">
+              <div class="card-hud-header">SYS.COMP.05</div>
+              <h3>Ideates</h3>
+              <p>Pitch innovative urban planning and sustainable tech solutions.</p>
+              <div class="track-meta">
+                <span class="prize">PRIZE: ₹1,20,000</span>
+                <span class="status pulse">OPEN</span>
+              </div>
+            </div>
+
+            <div class="glass-card track-card track-right delay-1">
+              <div class="card-hud-header">SYS.COMP.06</div>
+              <h3>Algo Trading</h3>
+              <p>High frequency trading algorithm and strategy design.</p>
+              <div class="track-meta">
+                <span class="prize">PRIZE: ₹90,000</span>
+                <span class="status pulse">OPEN</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 4: Sponsors & CTA -->
+      <section class="section cta-section" id="sponsors">
+        <div class="parallax-layer parallax-bg cta-bg">
+          <div class="stars layer-1"></div>
+          <div class="stars layer-2"></div>
+          <div class="stars layer-3"></div>
+        </div>
+        <div class="parallax-layer parallax-mid cta-mid">
+          <img src="/moon.jpg" alt="Cyber Moon" class="cyber-moon" />
+        </div>
+        <div class="parallax-layer parallax-fore cta-fore">
+          
+          <div class="sponsors-marquee-container">
+            <div class="sponsors-marquee">
+              <span>TITLE SPONSOR: JIO</span>
+              <span>•</span>
+              <span>CO-SPONSOR: GOOGLE CLOUD</span>
+              <span>•</span>
+              <span>TECH PARTNER: AWS</span>
+              <span>•</span>
+              <span>ROBOTICS PARTNER: BOSTON DYNAMICS</span>
+              <span>•</span>
+              <span>TITLE SPONSOR: JIO</span>
+              <span>•</span>
+              <span>CO-SPONSOR: GOOGLE CLOUD</span>
+              <span>•</span>
+              <span>TECH PARTNER: AWS</span>
+              <span>•</span>
+              <span>ROBOTICS PARTNER: BOSTON DYNAMICS</span>
+            </div>
+          </div>
+
+          <div class="cta-content">
+            <h2 class="glitch-text" data-text="JOIN THE REVOLUTION">JOIN THE REVOLUTION</h2>
+            <p>Access the portal and secure your coordinates.</p>
+            <div class="cta-buttons">
+              <!-- Provided link will be injected here. Currently '#' -->
+              <a href="#" class="btn btn-primary cyber-btn">
+                <span class="btn-glitch"></span>
+                REGISTER NOW
+              </a>
+              <a href="#" class="btn btn-secondary cyber-btn">CA PORTAL</a>
+            </div>
+          </div>
+
+          <footer class="footer">
+            <div class="footer-hud">
+              <span>// TECHFEST.ORG</span>
+              <span>// IIT BOMBAY</span>
+              <span>// 2026 EDITION</span>
+            </div>
+          </footer>
+        </div>
+      </section>
+
+    </div>
+    <script type="module" src="./src/main.js"></script>
+  </body>
+</html>
